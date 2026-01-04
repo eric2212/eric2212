@@ -2,78 +2,64 @@
   "version": "1.0.0",
   "rss": "https://helios-files.geekcorner.eu.org/rss.xml",
   "discord": {
-    "clientId": "1433724603695366236",
-    "smallImageText": "Đế chế Vô Tree",
+    "clientId": "1086936373057040395",
+    "smallImageText": "Votree Launcher",
     "smallImageKey": "big"
   },
   "servers": [
     {
-      "id": "VoTree-Fabric-1.21.10",
-      "name": "Đế chế Vô Tree",
-      "description": "Minecraft 1.21.10 (Fabric)",
-      "icon": "https://helios-files.geekcorner.eu.org/servers/votree/icon.png",
+      "id": "Fabric-Demo-1.21.10",
+      "name": "Fabric-Demo (Minecraft 1.21.10)",
+      "description": "Fabric-Demo Running Minecraft 1.21.10 (Fabric v0.16.1)",
+      "icon": "https://helios-files.geekcorner.eu.org/servers/Fabric-Demo-1.20.4/Fabric-Demo-1.20.4.png",
       "version": "1.0.0",
       "address": "b5.asaka.asia:30024",
       "minecraftVersion": "1.21.10",
-
       "mainServer": true,
-      "autoconnect": true,
-
-      "discord": {
-        "shortId": "Fabric 1.21.10",
-        "largeImageKey": "fabric",
-        "largeImageText": "Fabric Loader"
-      },
-
+      "autoconnect": false,
       "modules": [
         {
-          "id": "net.fabricmc:fabric-loader:0.15.7",
-          "name": "Fabric Loader",
-          "type": "FabricLoader",
+          "id": "net.fabricmc:fabric-loader:1.1.0",
+          "name": "Fabric (fabric-loader)",
+          "type": "Fabric",
           "artifact": {
-            "url": "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.15.7/fabric-loader-0.15.7.jar",
-            "MD5": "IGNORE"
+            "size": 1321135,
+            "MD5": "744dbc7c568d7e782e6616637a14f6b3",
+            "url": "https://helios-files.geekcorner.eu.org/repo/lib/net/fabricmc/fabric-loader/1.1.0/fabric-loader-1.1.0.jar"
           },
-          "subModules": [
-            {
-              "id": "net.fabricmc:intermediary:1.21.10",
-              "name": "Fabric Intermediary",
-              "type": "Library",
-              "artifact": {
-                "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21.10/intermediary-1.21.10.jar",
-                "MD5": "IGNORE"
-              }
-            }
-          ]
-        },
-
+          "subModules": []
+        }
+      ]
+    },
+    {
+      "id": "Forge-Demo-1.20.1",
+      "name": "Forge-Demo (Minecraft 1.20.1)",
+      "description": "Forge Client Example",
+      "icon": "https://example.com/icon.png",
+      "version": "1.0.0",
+      "address": "play.myserver.com:25565",
+      "minecraftVersion": "1.20.1",
+      "mainServer": false,
+      "autoconnect": false,
+      "modules": [
         {
-          "id": "net.fabricmc.fabric-api:fabric-api:0.102.0+1.21.10",
-          "name": "Fabric API",
-          "type": "FabricMod",
+          "id": "net.minecraftforge:forge:1.20.1-47.2.0",
+          "name": "Minecraft Forge",
+          "type": "Forge",
           "artifact": {
-            "url": "https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api/0.102.0+1.21.10/fabric-api-0.102.0+1.21.10.jar",
-            "MD5": "IGNORE"
+            "size": 5000000,
+            "MD5": "examplemd5",
+            "url": "https://maven.minecraftforge.net/..."
           }
         },
-
         {
-          "id": "servers.dat",
-          "name": "Saved Servers",
-          "type": "File",
+          "id": "com.example.mod:examplemod:1.0",
+          "name": "Example Mod",
+          "type": "ForgeMod",
           "artifact": {
-            "path": "servers.dat",
-            "url": "https://helios-files.geekcorner.eu.org/servers/votree/servers.dat"
-          }
-        },
-
-        {
-          "id": "options.txt",
-          "name": "Default Options",
-          "type": "File",
-          "artifact": {
-            "path": "options.txt",
-            "url": "https://helios-files.geekcorner.eu.org/servers/votree/options.txt"
+            "size": 1024,
+            "MD5": "modmd5",
+            "url": "https://example.com/mods/examplemod.jar"
           }
         }
       ]
